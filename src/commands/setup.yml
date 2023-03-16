@@ -3,4 +3,4 @@ description: >
 steps:
   - run:
       name: Install bind9utils
-      command: apt update && apt install bind9utils
+      command: sudo apt update && sudo apt install bind9utils
