@@ -19,7 +19,7 @@ jobs:
       - dns-zone-validation/greet
       - dns-zone-validation/setup
       - dns-zone-validation/validate
-          path: src/examples/zones
+          path: 'src/examples/zones'
 workflows:
   test-deploy:
     jobs:
