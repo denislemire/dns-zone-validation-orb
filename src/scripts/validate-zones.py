@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import os
 import sys
@@ -7,7 +6,7 @@ import subprocess
 goodzones = 0
 badzones = []
 
-for entry in os.environ.get("DNS_ZONE_PATH", "."):
+for entry in os.scandir(os.environ.get("DNS_ZONE_PATH", ".")):
 	zonename = None
 
 	if not entry.is_file():
