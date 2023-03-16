@@ -14,7 +14,7 @@ for entry in os.scandir(zone_path):
 		continue
 
 	if entry.name.endswith('.db'):
-		zonename = entry.name.rstrip('.db')
+		zonename = entry.name[:-3]
 
 	if entry.name.endswith('.rev'):
 		zonename = entry.name.lstrip('db.')
@@ -41,4 +41,4 @@ for entry in os.scandir(zone_path):
 	for z in badzones:
 		print('- ' + z)
 
-	sys.exit(len(badzones))
+sys.exit(len(badzones))
