@@ -8,5 +8,6 @@ parameters:
 steps:
   - run:
       name: Validate zones
-      command: |
-        <<include(src/scripts/validate_zones.py)>> <<parameters.path>>
+      environment:
+        DNS_ZONE_PATH: <<parameters.path>>
+      command: <<include(src/scripts/validate_zones.py)>>
