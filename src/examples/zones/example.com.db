@@ -1,6 +1,6 @@
 $TTL 86400
 @   IN  SOA ns1.example.com. hostmaster.example.com. (
-        20230123   ; serial
+        2023012301 ; serial
         3600       ; refresh
         1800       ; retry
         604800     ; expire

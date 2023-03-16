@@ -1,6 +1,6 @@
 $TTL 86400
 @   IN  SOA ns1.so.very.invalid. hostmaster.so.very.invalid. (
-        20230123   ; serial
+        2023012302 ; serial
         3600       ; refresh
         1800       ; retry
         604800     ; expire
@@ -13,7 +13,7 @@ $TTL 86400
 
 ; A records for name servers
 ns1     IN  A   192.168.1.1
-ns2     IN  A   192.168.1.2
+ns2     IN  A   2001:db8::dead:beaf
 
 ; A records for fictitious hosts
 www     IN  A   192.168.1.10
