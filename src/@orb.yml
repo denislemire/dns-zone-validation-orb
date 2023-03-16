@@ -1,7 +1,11 @@
 version: 2.1
 
 description: >
-  An ORB to validate DNS zones and deploy them to prod
+  An ORB to validate DNS zones and deploy them to production. This
+  enables all DNS zones to be stored in a Github repo. A valid
+  change to zone file in git automatically gets deployed to production.
+  This is how you work smarter instead of harder!
+
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
