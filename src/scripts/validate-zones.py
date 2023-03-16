@@ -27,7 +27,7 @@ for entry in os.scandir(zone_path):
 	if zonename == None:
 		continue
 
-	s = subprocess.run (['/usr/sbin/named-checkzone', zonename, zone_path + '/' + entry.name], check=False)
+	s = subprocess.run (['named-checkzone', zonename, zone_path + '/' + entry.name], check=False)
 	returncode = s.returncode
 
 	if returncode:
