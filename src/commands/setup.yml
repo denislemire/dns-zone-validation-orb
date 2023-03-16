@@ -1,0 +1,6 @@
+description: >
+  Sets up environment, for now just installs bind9utils
+steps:
+  - run:
+      name: Install bind9utils
+      command: sudo apt update && sudo apt install bind9utils
