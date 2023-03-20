@@ -1,0 +1,14 @@
+description: >
+  Validate all zones in a dir
+parameters:
+  path:
+    type: string
+    default: "."
+    description: "Path of zone files to validate"
+steps:
+  - run:
+      name: Validate zones
+      environment:
+        DNS_ZONE_PATH: <<parameters.path>>
+      shell: /usr/bin/env python3
+      command: <<include(scripts/validate-zones.py)>>

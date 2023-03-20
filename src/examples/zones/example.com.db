@@ -1,0 +1,30 @@
+$TTL 86400
+@   IN  SOA ns1.example.com. hostmaster.example.com. (
+        2023012301 ; serial
+        3600       ; refresh
+        1800       ; retry
+        604800     ; expire
+        86400      ; minimum
+)
+
+; Name servers
+@       IN  NS  ns1.example.com.
+@       IN  NS  ns2.example.com.
+
+; A records for name servers
+ns1     IN  A   192.168.1.1
+ns2     IN  A   192.168.1.2
+
+; A records for fictitious hosts
+www     IN  A   192.168.1.10
+mail    IN  A   192.168.1.11
+ftp     IN  A   192.168.1.12
+
+; CNAME record
+webmail IN  CNAME mail.example.com.
+
+; MX record
+@       IN  MX  10 mail.example.com.
+
+; TXT record
+@       IN  TXT  "v=spf1 mx -all"
