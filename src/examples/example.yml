@@ -1,13 +1,14 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Validate BIND zone files
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
-  workflows:
-    use-my-orb:
-      jobs:
-        - <orb-name>/<job-name>
+    dns-zone-validation: denislemire/dns-zone-validation@1.0
+  jobs:
+    validate:
+      docker:
+        - image: cimg/base:current
+      steps:
+        - checkout
+        - dns-zone-validation/setup
+        - dns-zone-validation/validate
